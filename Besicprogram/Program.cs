@@ -5,23 +5,32 @@ namespace Besicprogram
     class Program
 
     {
-        static void Main(string[] args)
+        static bool isPowerOfTwo(int n)
         {
-            int year;
-            Console.Write("Enter the Year :");
-            year = Convert.ToInt32(Console.ReadLine());
-            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
-                Console.WriteLine("{0} is Leap Year", year);
-            else
-                Console.WriteLine("{0} is not a Leap Year", year);
+            if (n == 0)
+                return false;
 
+            while (n != 1)
+            {
+                if (n % 2 != 0)
+                    return false;
 
-            Console.ReadLine();
+                n = n / 2;
+            }
+            return true;
         }
 
-    }
+        
+        public static void Main()
+        {
+            Console.WriteLine(isPowerOfTwo(64) ? "Yes" : "No");
+            Console.WriteLine(isPowerOfTwo(37) ? "Yes" : "No");
 
+        }
+    }
 }
+
+
 
 
 
