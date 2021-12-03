@@ -5,30 +5,29 @@ namespace Besicprogram
     class Program
 
     {
-        static bool isPowerOfTwo(int n)
+        static double NthHarmonic(int N)
         {
-            if (n == 0)
-                return false;
 
-            while (n != 1)
+            float harmonic = 1;
+
+            for (int i = 2; i <= N; i++)
             {
-                if (n % 2 != 0)
-                    return false;
-
-                n = n / 2;
+                harmonic += (float)1 / i;
             }
-            return true;
+
+            return harmonic;
         }
 
         
-        public static void Main()
+        static public void Main()
         {
-            Console.WriteLine(isPowerOfTwo(64) ? "Yes" : "No");
-            Console.WriteLine(isPowerOfTwo(37) ? "Yes" : "No");
+            int N = 8;
 
+            Console.Write(NthHarmonic(N));
         }
     }
 }
+
 
 
 
