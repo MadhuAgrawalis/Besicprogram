@@ -5,48 +5,19 @@ namespace Besicprogram
     class Program
 
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            int year;
+            Console.Write("Enter the Year :");
+            year = Convert.ToInt32(Console.ReadLine());
+            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+                Console.WriteLine("{0} is Leap Year", year);
+            else
+                Console.WriteLine("{0} is not a Leap Year", year);
 
-         {
-            Console.WriteLine("Let's flip a coin 10000 times");
 
-            Coinflip();
-
-         }
-          public static int Coinflip()
-
-         {
-            Random Rand = new Random();
-
-            int heads = 0;
-
-            int tails = 0;
-
-            int result = 0;
-
-            for (int i = 0; i< 10000; i++)
-
-            {
-
-                result = Rand.Next(0, 2);
-            if (result == 1)
-
-                {
-                    heads++;
-                    }
-                else
-                    
-                {
-                   tails++;
-                    
-                }
-            }
-            Console.WriteLine("heads was flipped {0} times", heads);
-            Console.WriteLine("tails was flipped {0} times", tails);
-            
-            return result;
-            
-          }
+            Console.ReadLine();
+        }
 
     }
 
