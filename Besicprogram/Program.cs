@@ -1,25 +1,17 @@
 ﻿using System;
-namespace FactorialExample
+class First
 {
-    class Program
+    static void Main()
     {
-        static void Main()
-        {
-            Console.WriteLine("Enter the number: ");
-            int a = int.Parse(Console.ReadLine());
-            int fact = 1;
-            for (int x = 1; x <= a; x++)
-            {
-                fact *= x;
-            }
-            Console.WriteLine(fact);
-            Console.ReadLine();
-        }
+        int a = 75, b = 84, t;
+        t = a;
+        a = b;
+        b = t;
+        Console.WriteLine("Values after swapping:");
+        Console.WriteLine("a is :" + a);
+        Console.WriteLine("b is :" + b);
     }
 }
-
-
-
 
 
 
