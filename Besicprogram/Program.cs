@@ -1,29 +1,19 @@
 ﻿using System;
-namespace Besicprogram
-
+namespace FactorialExample
 {
     class Program
-
     {
-        static double NthHarmonic(int N)
+        static void Main()
         {
-
-            float harmonic = 1;
-
-            for (int i = 2; i <= N; i++)
+            Console.WriteLine("Enter the number: ");
+            int a = int.Parse(Console.ReadLine());
+            int fact = 1;
+            for (int x = 1; x <= a; x++)
             {
-                harmonic += (float)1 / i;
+                fact *= x;
             }
-
-            return harmonic;
-        }
-
-        
-        static public void Main()
-        {
-            int N = 8;
-
-            Console.Write(NthHarmonic(N));
+            Console.WriteLine(fact);
+            Console.ReadLine();
         }
     }
 }
