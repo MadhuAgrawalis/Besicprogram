@@ -1,24 +1,34 @@
 ﻿using System;
-class First
-{
+class PrimeNumberExample
+{  
+
     
-        static void Main(string[] args)
+        
+        
+        public static void Main(string[] args)
         {
-            int i;
-            Console.Write("Enter a Number : ");
-            i = int.Parse(Console.ReadLine());
-            if (i % 2 == 0)
+            int n, i, m = 0, flag = 0;
+            Console.Write("Enter the Number to check Prime: ");
+            n = int.Parse(Console.ReadLine());
+            m = n / 2;
+            for (i = 2; i <= m; i++)
             {
-                Console.Write("Entered Number is an Even Number");
-                Console.Read();
+                if (n % i == 0)
+                {
+                    Console.Write("Number is not Prime.");
+                    flag = 1;
+                    break;
+                }
             }
-            else
-            {
-                Console.Write("Entered Number is an Odd Number");
-                Console.Read();
-            }
+            if (flag == 0)
+                Console.Write("Number is Prime.");
         }
     }
+    
+    
+        
+        
+    
 
     
 
