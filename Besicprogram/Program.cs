@@ -1,17 +1,27 @@
 ﻿using System;
 class First
 {
-    static void Main()
-    {
-        int a = 75, b = 84, t;
-        t = a;
-        a = b;
-        b = t;
-        Console.WriteLine("Values after swapping:");
-        Console.WriteLine("a is :" + a);
-        Console.WriteLine("b is :" + b);
+    
+        static void Main(string[] args)
+        {
+            int i;
+            Console.Write("Enter a Number : ");
+            i = int.Parse(Console.ReadLine());
+            if (i % 2 == 0)
+            {
+                Console.Write("Entered Number is an Even Number");
+                Console.Read();
+            }
+            else
+            {
+                Console.Write("Entered Number is an Odd Number");
+                Console.Read();
+            }
+        }
     }
-}
+
+    
+
 
 
 
